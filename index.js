@@ -2,11 +2,17 @@
 const employee = {name: "Michael",
 streetAddress: "Lives in a pineapple under the sea"}
 
+
+function updateEmployeeWithKeyAndValue(employee,key, value) {
+    return { ...employee, [key]: value}
+}
+/*
 function updateEmployeeWithKeyAndValue(employee, key, value){
     const employeeList = {...employee}
     employeeList[key] = value
     return employeeList
 }
+*/
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
     employee[key] = value
@@ -18,6 +24,7 @@ function deleteFromEmployeeByKey(employee, key){
     delete newList[key]
     return newList
 }
+
 
 function destructivelyDeleteFromEmployeeByKey(employee, key){
     delete employee[key]
